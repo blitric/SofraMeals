@@ -1,0 +1,32 @@
+
+<div class="container" style ="margin-bottom: 80px; margin-top: 120px; ">
+ 
+<p>(testing recipe display)</p>
+<h3> {{apis.title}}</h3>
+<p>Servings: {{apis.servings}}</p>
+<p>Ready in minutes: {{apis.readyInMinutes}}</p>
+<img style = "width:30%; height:auto" src = 'https://spoonacular.com/recipeImages/{{apis.id}}-636x393.jpg' />
+
+<table class="table  table-inverse">
+      <tr><td>&nbsp;</td></tr>
+      <tr><th>Ingredients</th></tr>
+      <tr><td>&nbsp;</td></tr>
+      <tr *ngFor="let api of apis.extendedIngredients">
+        <td >
+          {{api.name}}
+        </td>
+      </tr>
+
+      <tr><td>&nbsp;</td></tr>
+      <tr *ngFor="let api of apis.analyzedInstructions">
+        <td >
+          <p style = "font-weight: bold;">Instructions: </p>
+          <p *ngFor="let ap of api.steps">{{ap.number}}. &nbsp;  {{ap.step}}</p> 
+        </td>
+      </tr>  
+</table>
+
+</div>
+
+
+  
