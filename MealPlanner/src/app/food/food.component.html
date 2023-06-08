@@ -1,15 +1,19 @@
 <div class ="container" style = "margin-top: 150px;">
- <h2>  Food component testing... (retrieving food data from the database) </h2>
+ <h2>  Food data retrieved from the database </h2>
 </div>
 
 <div class="container" style = "margin-top: 50px;">
     <table class="table table-inverse">
       <tr>
+        <th>Food ID</th>
         <th>Food Name</th>
         <th>Food Type</th>
         <th>Food Quantity</th>
       </tr>
       <tr *ngFor="let food of food">
+        <td>
+          {{food.id}}
+        </td>
         <td>
           {{food.name}}
         </td>
