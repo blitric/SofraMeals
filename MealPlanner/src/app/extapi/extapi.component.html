@@ -17,13 +17,14 @@
         </td>
       </tr>
 
+     <tr><td>&nbsp;</td></tr>
+      <tr><th style = "font-weight: bold;">Instructions:</th></tr>
       <tr><td>&nbsp;</td></tr>
-      <tr *ngFor="let api of apis.analyzedInstructions">
-        <td >
-          <p style = "font-weight: bold;">Instructions: </p>
-          <p *ngFor="let ap of api.steps">{{ap.number}}. &nbsp;  {{ap.step}}</p> 
+      <tr *ngFor="let api of apis.analyzedInstructions[0].steps">
+        <td> 
+          <p>{{api.number}}. &nbsp;  {{api.step}}</p>
         </td>
-      </tr>  
+      </tr>     
 </table>
 
 </div>
