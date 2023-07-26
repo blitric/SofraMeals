@@ -1,18 +1,21 @@
 import { Component, OnInit } from '@angular/core';
 import { SearchParamsService } from '../services/search-params.service';
-import { Subscription } from 'rxjs';                             
+import { Subscription } from 'rxjs';   
 
 @Component({
-  selector: 'searchbar',
-  templateUrl: './searchbar.component.html',
-  styleUrls: ['./searchbar.component.css']
+  selector: 'app-recipe-search-results',
+  templateUrl: './recipe-search-results.component.html',
+  styleUrls: ['./recipe-search-results.component.css']
 })
-export class SearchbarComponent implements OnInit {
+export class RecipeSearchResultsComponent implements OnInit {
 
   searchQueryInput: string;
   subscription: Subscription;
+
+  constructor (private searchParamsService:SearchParamsService) { 
+    }
+    
   
-  constructor(private searchParamsService: SearchParamsService ) { }
 
   ngOnInit(): void {
     this.subscription = this.searchParamsService.currentSearchInput.subscribe(data => this.searchQueryInput = data);
@@ -21,12 +24,6 @@ export class SearchbarComponent implements OnInit {
   ngOnDestroy() {
     this.subscription.unsubscribe();
   }
-  
-
-  onSubmit() {
-    this.searchParamsService.setSearchInput(this.searchQueryInput);
-  }
 
 }
-
 

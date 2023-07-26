@@ -14,6 +14,8 @@ import { FoodService } from './services/food.service';
 import {HttpClientModule} from '@angular/common/http';
 import { ExtapiService } from './services/extapi.service';
 import { ExtapiComponent } from './extapi/extapi.component';
+import { RecipeSearchResultsComponent } from './recipe-search-results/recipe-search-results.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -27,12 +29,14 @@ import { ExtapiComponent } from './extapi/extapi.component';
     ImagesrowComponent,
     HomeComponent,
     FoodComponent,
-    ExtapiComponent
+    ExtapiComponent,
+    RecipeSearchResultsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

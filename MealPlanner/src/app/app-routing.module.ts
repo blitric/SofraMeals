@@ -4,11 +4,13 @@ import { RouterModule, Routes, Router } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { FoodComponent } from './food/food.component';
 import { ExtapiComponent } from './extapi/extapi.component';
+import { RecipeSearchResultsComponent } from './recipe-search-results/recipe-search-results.component';
 
 const routes: Routes = [
   { path: 'home' , component : HomeComponent},
   { path: 'foods' , component : FoodComponent},
   { path: 'extapi' , component : ExtapiComponent},
+  { path: 'recipes' , component : RecipeSearchResultsComponent},
   { path: '**', redirectTo: '/home', pathMatch: 'full' }
 ];
 
