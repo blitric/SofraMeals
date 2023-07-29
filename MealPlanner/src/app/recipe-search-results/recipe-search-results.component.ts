@@ -1,28 +1,29 @@
 import { Component, OnInit } from '@angular/core';
-import { SearchParamsService } from '../services/search-params.service';
-import { Subscription } from 'rxjs';   
+import { RecipeSearchResultsService } from '../services/recipe-search-results.service';   
 
 @Component({
   selector: 'app-recipe-search-results',
   templateUrl: './recipe-search-results.component.html',
   styleUrls: ['./recipe-search-results.component.css']
 })
+
 export class RecipeSearchResultsComponent implements OnInit {
+ 
+  public recipes;
 
-  searchQueryInput: string;
-  subscription: Subscription;
-
-  constructor (private searchParamsService:SearchParamsService) { 
+  constructor (private recipeSearchResultsService: RecipeSearchResultsService ) { 
     }
     
-  
-
   ngOnInit(): void {
-    this.subscription = this.searchParamsService.currentSearchInput.subscribe(data => this.searchQueryInput = data);
+    this.getRecipes();
   }
 
-  ngOnDestroy() {
-    this.subscription.unsubscribe();
+  getRecipes() {
+    this.recipeSearchResultsService.getRecipes().subscribe(
+      data => {this.recipes = data},
+      err => console.error(err),
+      () => console.log('recipes loaded') 
+    );
   }
 
 }
