@@ -16,6 +16,7 @@ import { ExtapiService } from './services/extapi.service';
 import { ExtapiComponent } from './extapi/extapi.component';
 import { RecipeSearchResultsComponent } from './recipe-search-results/recipe-search-results.component';
 import { FormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 @NgModule({
@@ -36,7 +37,8 @@ import { FormsModule } from '@angular/forms';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { RecipeSearchResultsService } from '../services/recipe-search-results.service';   
+import { RecipeSearchResultsService } from '../services/recipe-search-results.service';  
 
 @Component({
   selector: 'app-recipe-search-results',
@@ -10,12 +10,14 @@ import { RecipeSearchResultsService } from '../services/recipe-search-results.se
 export class RecipeSearchResultsComponent implements OnInit {
  
   public recipes;
-
+  
   constructor (private recipeSearchResultsService: RecipeSearchResultsService ) { 
     }
     
   ngOnInit(): void {
-    this.getRecipes();
+
+  this.getRecipes();
+   
   }
 
   getRecipes() {

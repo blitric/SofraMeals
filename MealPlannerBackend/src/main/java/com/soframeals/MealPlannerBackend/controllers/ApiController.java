@@ -17,13 +17,13 @@ public class ApiController {
     String app_key;
 
     @Value("${uriTest}")
-    String uri;
+    String uriTest;
+
+    @Value("${uriRecipes}")
+    String uriRecipes;
 
     @GetMapping("/extapi")
     public ResponseEntity<String> getApi() {
-
-        // String type = "public";
-        // String q = "cheese";
 
         RestTemplate restTemplate = new RestTemplate();
 
@@ -33,8 +33,8 @@ public class ApiController {
 
         LinkedMultiValueMap<String, String> allRequestParams = new LinkedMultiValueMap<>();
         allRequestParams.add("apiKey", app_key);
-        
-        UriComponentsBuilder builder = UriComponentsBuilder.fromUriString(uri).queryParams(allRequestParams);
+
+        UriComponentsBuilder builder = UriComponentsBuilder.fromUriString(uriTest).queryParams(allRequestParams);
         UriComponents uriComponents = builder.build().encode();
         ResponseEntity<String> responseEntity = restTemplate.exchange(uriComponents.toUri(), HttpMethod.GET, entity, String.class);
         return responseEntity;
@@ -42,8 +42,6 @@ public class ApiController {
 
     @GetMapping("/recipes")
     public ResponseEntity<String> getRecipesByIngredients(@RequestParam String ingredients) {
-
-        String uriRecipes = "https://api.spoonacular.com/recipes/findByIngredients";
 
         RestTemplate restTemplate = new RestTemplate();
 
