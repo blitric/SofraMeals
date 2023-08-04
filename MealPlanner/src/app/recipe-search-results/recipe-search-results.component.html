@@ -1,15 +1,14 @@
 
-
 <div class = "container" style = "margin-top: 125px;">
 
   <searchbar></searchbar>
   
     <div class = "row" style = "margin-top:50px; padding-bottom: 60px;">
          
-        <div *ngFor="let recipe of recipes" class = "col-md-3" >
-          <div style = "width:95%; height:auto"> <img  src = "{{recipe.image}}" style = "object-fit:cover; border-radius:5%; height:100%; width:100%;" /> </div>
-          <p style = "font-weight: bold"> {{recipe.title}} </p>
-        </div>
+       <div *ngFor="let recipe of recipes" class = "col-md-3" >
+        <a [routerLink] ="['/viewrecipe', recipe.id]"> <div style = "width:95%; height:auto">  <img  src = "{{recipe.image}}" style = "object-fit:cover; border-radius:5%; height:100%; width:100%;" />  </div> </a> 
+        <p style = "font-weight: bold"> {{recipe.title}} </p> 
+       </div> 
       
     </div>
    

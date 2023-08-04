@@ -17,6 +17,7 @@ import { ExtapiComponent } from './extapi/extapi.component';
 import { RecipeSearchResultsComponent } from './recipe-search-results/recipe-search-results.component';
 import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ViewRecipeComponent } from './view-recipe/view-recipe.component';
 
 
 @NgModule({
@@ -31,7 +32,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     HomeComponent,
     FoodComponent,
     ExtapiComponent,
-    RecipeSearchResultsComponent
+    RecipeSearchResultsComponent,
+    ViewRecipeComponent
   ],
   imports: [
     BrowserModule,
