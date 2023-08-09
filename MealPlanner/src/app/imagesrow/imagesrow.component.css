@@ -15,5 +15,11 @@
      height:100%; 
      position: absolute; 
      object-fit: cover; 
-     border-radius: 5%;    
+     border-radius: 5%; 
+       
+}
+
+.mealImg:hover {
+ cursor: pointer;
+      
 }

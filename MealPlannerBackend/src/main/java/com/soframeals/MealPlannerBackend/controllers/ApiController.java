@@ -78,6 +78,7 @@ public class ApiController {
 
         LinkedMultiValueMap<String, String> allRequestParams = new LinkedMultiValueMap<>();
         allRequestParams.add("apiKey", app_key);
+        allRequestParams.add("includeNutrition", "true");
 
         Map<String, String> params = new HashMap<String, String>();
         params.put("id", id);  // path params
@@ -90,5 +91,5 @@ public class ApiController {
 
     }
 
-    
+
 }

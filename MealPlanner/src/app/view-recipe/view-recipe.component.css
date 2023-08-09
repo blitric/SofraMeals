@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin+Slab|Raleway:300,400');
+
+body {
+  font: normal 14px 'Raleway', Helvetica, Arial, sans-serif;
+  padding: 30px;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+p {
+  line-height: 1.4em;
+}
+
+ul, ol {
+  padding: 0;
+  margin: 0;
+  line-height: 1.4em;
+}
+
+ul {
+  list-style-type: none;
+}
+
+ol {
+  list-style-position: inside;
+}
+
+.recipe {
+  max-width: 960px;
+  padding: 10px;
+  margin: 0 auto 2em;
+  /*border-radius: 1em;
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, .3);*/
+}
+
+.recipe header {
+  min-height: 200px;
+  border: none;
+}
+
+.recipe header::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.recipe h1,
+.recipe h2 {
+  font-family: 'Josefin Slab', serif; 
+}
+
+.recipe h1 {
+  font-weight: normal;
+  font-size: 36px;
+  padding: 0;
+  margin: 0;
+}
+
+.recipe header > img {
+  float: right;
+  width: 50%;
+  height: 50%;
+  max-height: 280px;
+  margin: 0 0 15px 15px;
+  object-fit: cover;
+  border-radius: 1em;
+}
+
+.recipe h2 {
+  font-weight: 300;
+  font-size: 26px;
+  padding-bottom: 10px;
+  margin: 0 0 20px 0;
+  border-bottom: 1px solid #dddddd;
+}
+
+.recipe section {
+  margin-bottom: 50px;
+}
+
+.recipe ul {
+  margin: 10px 0;
+}
+
+.recipe ul.categories > li,
+.recipe ul.ethnicities > li {
+  display: inline-block;
+  font-size: .85em;
+}
+
+.recipe .categories > li + li::before,
+.recipe .ethnicities > li + li::before {
+  content: " | ";
+}
+
+.recipe .ingredients {
+    -moz-column-width: 11.5em; /* Firefox */
+    -webkit-column-width: 11.5em; /* webkit, Safari, Chrome */
+    column-width: 11.5em;
+    list-style-position: inside;
+}
+
+.recipe .ingredients > li:before
+{
+    content: '✔'; 
+}
+
+.recipe .ingredients > li + li,
+.recipe .steps > li + li,
+.recipe .notes > li + li {
+  margin-top: 10px;
+}
