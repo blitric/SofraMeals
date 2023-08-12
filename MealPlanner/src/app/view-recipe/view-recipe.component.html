@@ -19,14 +19,16 @@
       </ul>
 
       <ul class="categories">
-       <li *ngFor="let diet of recipe.diets">{{diet}} diet</li>
-      </ul>                                                                                                                     
+       <li *ngFor="let diet of recipe.diets">{{diet}}</li>
+      </ul> 
+      
+      <button class="col btn btn-gradient " >+ Add to MyMeals</button>
     </header>
 
     <section>
       <h2 style = "font-weight: bold;">Ingredients</h2>
       <ul class="ingredients">
-        <li *ngFor="let ingredient of recipe.extendedIngredients"> {{ingredient.name}} </li>
+        <li *ngFor="let ingredient of recipe.extendedIngredients "> {{ingredient.original}} </li>
       </ul>
     </section>
 

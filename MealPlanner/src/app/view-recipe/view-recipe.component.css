@@ -110,3 +110,29 @@ ol {
 .recipe .notes > li + li {
   margin-top: 10px;
 }
+
+
+.btn {
+  flex: 1 1 auto;
+  padding: 9px;
+  text-align: center;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+ /* text-shadow: 0px 0px 10px rgba(0,0,0,0.2);*/
+  box-shadow: 0 0 20px #eee;
+  border-radius: 4px;
+  margin-top: 25px;
+  margin-bottom: 40px;
+  font-weight: 400;
+ }
+
+
+.btn:hover {
+  background-position: right center; /* change the direction of the change here */
+}
+
+.btn-gradient {
+  background-image: linear-gradient(to right, #fc987d 0%, #fd7651 51%, #f6d365 100%);
+}
+

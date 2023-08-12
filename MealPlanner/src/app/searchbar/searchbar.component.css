@@ -34,3 +34,7 @@
   #searchQuerySubmit:hover {
     cursor: pointer;
   }
+
+  h2{
+    font-weight: 300;
+  }

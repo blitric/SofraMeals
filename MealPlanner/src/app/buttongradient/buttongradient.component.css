@@ -12,7 +12,7 @@
 .btn-hover {
     width: 200px;
     font-size: 16px;
-    font-weight: 600;
+    font-weight: 400;
     color: #fff;
     cursor: pointer;
     margin: 20px;
@@ -20,9 +20,7 @@
     text-align:center;
     border: none;
     background-size: 300% 100%;
-
     border-radius: 50px;
- 
     -o-transition: all .4s ease-in-out;
     -webkit-transition: all .4s ease-in-out;
     transition: all .4s ease-in-out;
@@ -30,7 +28,6 @@
 
 .btn-hover:hover {
     background-position: 100% 0;
-
     -o-transition: all .4s ease-in-out;
     -webkit-transition: all .4s ease-in-out;
     transition: all .4s ease-in-out;
@@ -45,4 +42,6 @@
   background-image: linear-gradient(to right, #d17c87, #e6a46a, #e7ac6d, #d46839);
   box-shadow: 0 4px 15px 0 rgba(252, 104, 110, 0.75);
 }
+
+
 
