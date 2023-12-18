@@ -107,24 +107,8 @@ public class ApiController {
 
     @PostMapping("/addmeal")
     public void addMeal(MyMeals newMeal, @RequestBody String mealId) {
-        RestTemplate restTemplate = new RestTemplate();
 
-        HttpHeaders requestHeaders = new HttpHeaders();
-        requestHeaders.set("Accept", MediaType.APPLICATION_JSON_VALUE);
-        HttpEntity<?> entity = new HttpEntity<>(requestHeaders);
-
-        LinkedMultiValueMap<String, String> allRequestParams = new LinkedMultiValueMap<>();
-        allRequestParams.add("apiKey", app_key);
-
-        Map<String, String> params = new HashMap<String, String>();
-        params.put("id", mealId);
-
-        URI uri = UriComponentsBuilder.fromUriString(uriRecipe).buildAndExpand(params).toUri();
-        uri = UriComponentsBuilder.fromUri(uri).queryParams(allRequestParams).build().toUri();
-
-        ResponseEntity<String> responseEntity = restTemplate.exchange(uri, HttpMethod.GET, entity, String.class);
-
-        newMeal = new MyMeals(mealId);
+       newMeal = new MyMeals(mealId);
         myMealsRepository.save(newMeal);
     }
 
