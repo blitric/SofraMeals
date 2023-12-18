@@ -6,6 +6,7 @@ import { FoodComponent } from './food/food.component';
 import { ExtapiComponent } from './extapi/extapi.component';
 import { RecipeSearchResultsComponent } from './recipe-search-results/recipe-search-results.component';
 import { ViewRecipeComponent } from './view-recipe/view-recipe.component';
+import { MymealsComponent } from './mymeals/mymeals.component';
 
 const routes: Routes = [
   { path: 'home' , component : HomeComponent},
@@ -13,6 +14,7 @@ const routes: Routes = [
   { path: 'extapi' , component : ExtapiComponent},
   { path: 'recipes' , component : RecipeSearchResultsComponent},
   { path: 'viewrecipe/:recipeId', component: ViewRecipeComponent},
+  { path: 'mymeals' , component : MymealsComponent},
   { path: '**', redirectTo: '/home', pathMatch: 'full' }
 ];
 
@@ -25,3 +27,4 @@ const routes: Routes = [
   exports: [ RouterModule ]
 })
 export class AppRoutingModule {} 
+

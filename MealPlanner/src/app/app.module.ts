@@ -18,6 +18,7 @@ import { RecipeSearchResultsComponent } from './recipe-search-results/recipe-sea
 import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ViewRecipeComponent } from './view-recipe/view-recipe.component';
+import { MymealsComponent } from './mymeals/mymeals.component';
 
 
 @NgModule({
@@ -33,7 +34,8 @@ import { ViewRecipeComponent } from './view-recipe/view-recipe.component';
     FoodComponent,
     ExtapiComponent,
     RecipeSearchResultsComponent,
-    ViewRecipeComponent
+    ViewRecipeComponent,
+    MymealsComponent
   ],
   imports: [
     BrowserModule,

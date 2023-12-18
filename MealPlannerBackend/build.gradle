@@ -19,6 +19,9 @@ dependencies {
 	developmentOnly 'org.springframework.boot:spring-boot-devtools'
 	implementation 'mysql:mysql-connector-java'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	implementation 'org.json:json:20230227'
+	implementation 'com.google.code.gson:gson:2.8.7'
+
 }
 
 tasks.named('test') {

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { ViewRecipeService } from '../services/view-recipe.service';
-import * as _ from 'lodash'; 
+import { AddMealService } from '../services/add-meal.service';
 
 @Component({
   selector: 'app-view-recipe',
@@ -11,14 +11,14 @@ import * as _ from 'lodash';
 
 export class ViewRecipeComponent implements OnInit {
   
- public recipe;
+ public  recipe;
  public id;
  public calories;
  public fat;
  public protein;
  public ingredients;
 
-  constructor(private route: ActivatedRoute, private viewRecipeService:ViewRecipeService) { }
+  constructor(private route: ActivatedRoute, private router: Router, private viewRecipeService:ViewRecipeService, private addMealService:AddMealService) { }
 
   ngOnInit(): void {  
     this.id = this.route.snapshot.params['recipeId'];
@@ -40,5 +40,13 @@ getRecipe(id) {
     () => console.log('recipe loaded') 
   );
 }
+
+addMeal() {
+  this.addMealService.addMeal(this.id).subscribe((response:any) => {
+    console.log(response);
+  });
+  this.router.navigate(['mymeals']);
+}
+
 
 } 

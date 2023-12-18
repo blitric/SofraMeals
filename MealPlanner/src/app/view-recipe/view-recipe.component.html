@@ -22,7 +22,9 @@
        <li *ngFor="let diet of recipe.diets">{{diet}}</li>
       </ul> 
       
-      <button class="col btn btn-gradient " >+ Add to MyMeals</button>
+      <!--a [routerLink] ="['mymeals']"  [queryParams] = "{id: recipe.id}"> <button class="btn btn-gradient " >+ Add to MyMeals</button> </a-->
+      <button class="btn btn-gradient " (click)="addMeal()">+ Add to MyMeals</button> 
+
     </header>
 
     <section>

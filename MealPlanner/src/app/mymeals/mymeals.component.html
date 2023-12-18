@@ -1,0 +1,25 @@
+
+<div class = "container" style = "margin-top: 125px;">
+
+    <h1 style="text-align: center; color:  #7f4722; font-weight:300; font-family: 'Roboto'; margin-top:100px; margin-bottom:65px"> <span style = " letter-spacing: 3px; color: #c24244; font-weight: 400;">My Meals </span> Weekly Meal Plan</h1>
+    
+      <div class = "row" style = "margin-top:50px; padding-bottom: 60px;">
+           
+         <div *ngFor="let myMeal of myMeals" class = "col-md-3" style="margin-bottom: 70px;">
+       
+          <a [routerLink] ="['/viewrecipe', myMeal.id]"> <div style = "width:95%; height:auto">  <img  src = "{{myMeal.image}}" style = "object-fit:cover; border-radius:5%; height:100%; width:100%;" />  </div> </a> 
+          <p style = " margin-top: 10px; color:  #57504a; font-size:18px; font-weight: 500;"> {{myMeal.title}} </p> 
+          <!--a class="btn icon-btn btn-warning" href="#">
+            <span class="glyphicon btn-glyphicon glyphicon-minus img-circle text-warning"></span>
+            Remove
+            </a-->
+              
+               <button class="btn-hover color-4">Remove</button>
+      
+           
+         </div> 
+        
+      </div>
+     
+  </div>
+

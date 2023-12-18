@@ -1,0 +1,63 @@
+.btn-close {
+    background-color: rgb(192, 73, 73) !important;
+    opacity: 0.9;
+    border-radius: 100%;
+  
+}
+
+.btn-glyphicon {
+    padding:8px;
+    background:#ffffff;
+    margin-right:4px;
+}
+.icon-btn {
+    padding: 1px 15px 3px 2px;
+    border-radius:50px;
+}
+
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+
+
+.btn-hover {
+    width: 110px;
+    font-size: 15px;
+    font-weight: 400;
+    color: #fff;
+    cursor: pointer;
+    margin-left: 0px;
+    height: 35px;
+    text-align:center;
+    border: none;
+    background-size: 300% 100%;
+    border-radius: 50px;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+
+.btn-hover:hover {
+    background-position: 100% 0;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+
+.btn-hover:focus {
+    outline: none;
+}
+
+
+.btn-hover.color-4 {
+  background-image: linear-gradient(to right, #d17c87, #e6a46a, #e7ac6d, #d46839);
+  /*background-image: linear-gradient(to right, #fc987d 0%, #fd7651 51%, #f6d365 100%);*/
+  /*box-shadow: 0 4px 15px 0 rgba(252, 104, 110, 0.75);*/
+}
+
+
+
