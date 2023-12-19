@@ -25,5 +25,8 @@ public class MyMeals {
 
     public void setMealId(String mealId) { this.mealId= mealId; }
 
+    public int getId() {
+        return id;
+    }
 }
 

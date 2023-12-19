@@ -145,4 +145,16 @@ public class ApiController {
 
     }
 
+
+    @DeleteMapping("/removemeal")
+    public void removeMeal(@RequestParam String mealId) {
+
+        for (int i = 0; i < myMealsRepository.findAll().size(); i++) {
+            if(myMealsRepository.findAll().get(i).getMealId().equals(mealId)) {
+                myMealsRepository.deleteById(myMealsRepository.findAll().get(i).getId());
+            }
+        }
+    }
+
+
 }
